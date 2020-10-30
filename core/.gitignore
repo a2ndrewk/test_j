@@ -1,4 +1,9 @@
-target/
+t
+### IntelliJ IDEA ###
+.idea
+*.iws
+*.iml
+*.iprarget/
 !**/src/main/**/target/
 !**/src/test/**/target/
 
