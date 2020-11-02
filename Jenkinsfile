@@ -12,14 +12,7 @@ pipeline {
                 sh './mvnw clean package && ls -la web/target'
             }
         }
-
-        stage('Deploy') {
-            steps {
-                
-            }
-        }
     }
-
 }
 
 plugins {
