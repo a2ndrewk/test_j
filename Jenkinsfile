@@ -8,7 +8,8 @@ pipeline {
     stages {
         stage('Build and Package') {
             steps {
-                sh 'whoami && pwd && ls -la'
+                sh './mvnw clean package'
+//                sh 'whoami && pwd && ls -la'
 //                 mvnw clean package
             }
         }
