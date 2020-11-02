@@ -1,5 +1,5 @@
 pipeline {
-    agent master
+    agent any
 
     plugins {
         id 'com.palantir.docker-run' version '<version>'
