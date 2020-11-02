@@ -1,18 +1,15 @@
 pipeline {
-    agent any
-
-
-//     triggers {
-//         pollSCM '* * * * *'
-//     }
-
+    agent {
+        docker {
+            image 'maven:3-alpine'
+            args '-v $HOME/.m2:/root/.m2'
+        }
+    }
     stages {
         stage('Build and Package') {
             steps {
-                sh './mvnw clean package && ls -la web/target'
-                sh 'docker ps -a'
+                sh 'mvn clean package'
             }
         }
     }
 }
-
